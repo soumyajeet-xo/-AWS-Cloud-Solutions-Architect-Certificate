@@ -96,35 +96,58 @@ Aws complete  doc: https://docs.aws.amazon.com/index.html
 - IAM can give access/permissions to users
 - IAM policies are JSON documents
 - policy can be attached to specific user and group
-- Reading 1.7: Introduction to AWS Identity and Access Management : https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/3ELvV/reading-1-7-introduction-to-aws-identity-and-access-management
+- Reading 1.7: Introduction to AWS Identity and Access Management: https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/3ELvV/reading-1-7-introduction-to-aws-identity-and-access-management
 
 ## Role-Based Access in AWS
-- Iam roles also have credentials (temporary)
+- I am roles also have credentials (temporary)
 - To assign a role for employee dir app -----
 - IAM > Roles > Create Roles > Common use case ec2 check > 
 - roles for third-party identity providers and clients (federated users)
 -  identity provider (IdP)
 - aws iam identity centers
-- Reading 1.8: Role Based Access in AWS
+- Reading 1.8: Role-Based Access in AWS
 - https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/hyURm/reading-1-8-role-based-access-in-aws
 
 ## Introduction to Exercise 2
-- To implement the previous discussed IAM user best practices like not using root user.
+- To implement the previously discussed IAM user best practices like not using root users.
 
-Exercise 2: Following IAM Best Practices : https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/RQIuX/exercise-2-following-iam-best-practices
-Exercise 2: Working with IAM : https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/DEV-AWS-MO-GCNv2/exercise-2-iam.html
+Exercise 2: Following IAM Best Practices: https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/RQIuX/exercise-2-following-iam-best-practices
+Exercise 2: Working with IAM: https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/DEV-AWS-MO-GCNv2/exercise-2-iam.html
 
-12 digin account id and iam user : top right corner
+12 digits account id and IAM user: top right corner
 
-IAM role is used for federated logins (using an IdP with SAML tokens for example), and they don't have permanent access keys that you can download like regular IAM users have (the "an IAM role doesn't have any credentials" part)
-
-
+The IAM role is used for federated logins (using an IdP with SAML tokens for example), and they don't have permanent access keys that you can download like regular IAM users have (the "an IAM role doesn't have any credentials" part)
 
 
 
+## Demo AWS IAM
+- managed policies are predefined policies (JSON FILE)
+- Effect either allow or deny
+- * is a wild card, all API calls are allowed against the service.
+- is best practice to attach a policy to groups and not users directly
+- access keys will allow users to make programmatic calls like aws cl
 
+## Hosting the Employee Directory Application on AWS  
+Load balancing is the method of distributing network traffic equally across a pool of resources that support an application.
 
+- instance can be considered as one single virtual machine
+- default vpc
+- create ec2
 
+```
+#!/bin/bash -ex
+wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/DEV-AWS-MO
+GCNv2/FlaskApp.zip
+unzip FlaskApp.zip
+cd FlaskApp/
+yum -y install python3-pip
+pip install -r requirements.txt
+yum -y install stress
+export PHOTOS_BUCKET=${SUB_PHOTOS_BUCKET}
+export AWS_DEFAULT_REGION=us-east-1
+export DYNAMO_MODE=on
+FLASK_APP=application.py /usr/local/bin/flask run --host=0.0.0.0 --port=80
+```
 
 
 
