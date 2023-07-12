@@ -56,19 +56,19 @@ The Six Benefits of Cloud Computing
 
 ## Interacting with AWS
 - logical management of virtual infrastructure through aws application programming interface.
-- three mains ways ( aws management console, aws CLI interface, aws software development kits )
+- three mains ways ( aws management console, AWS CLI interface, aws software development kits )
 - management console... uses prompts..more like a GUI.
 - Command line interface (download or using aws cloudshell)
-- cli reduces accidental human errors as it automates... using scipts to repeat those commands too.
-- SDK used to interact programmatically. (popular lang like java, python, etc ).
-- employee directory uses Python and flask (pyhton SDK can be used to interact with aws)
+- cli reduces accidental human errors as it automates... using scripts to repeat those commands too.
+- SDK used to interact programmatically. (popular lang like Java, python, etc ).
+- employee directory uses Python and Flask (python SDK can be used to interact with aws)
 
 Reading ( Reading 1.4: Interacting with AWS): https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/pkNoh/reading-1-4-interacting-with-aws
 docs : 
-Aws complete  doc : https://docs.aws.amazon.com/index.html
-- management console : https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/learn-whats-new.html
-- cli ; https://aws.amazon.com/cli/
-- tools : https://aws.amazon.com/developer/tools/
+Aws complete  doc: https://docs.aws.amazon.com/index.html
+- management console: https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/learn-whats-new.html
+- CLI : https://aws.amazon.com/cli/
+- tools: https://aws.amazon.com/developer/tools/
 
 ## Introduction to Exercise 1
 - billing alert
@@ -76,6 +76,59 @@ Aws complete  doc : https://docs.aws.amazon.com/index.html
 - region change
 - employee directory hosting
 - 
+
+## Security and the AWS Shared Responsibility Model
+- aws follows the shared responsibility model. (vary from service to service
+- aws - security of the cloud
+- user - security in the cloud ( patching upgrades, access control, firewall)
+
+## Protect the AWS Root User
+- email account which created the account is the root user (unrestricted access)
+- single-factor authentication
+- MFA (multi-factor authentication) can be used to access specific AWS service
+- Reading: https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/lZN9N/reading-1-6-protect-the-aws-root-user
+- 
+
+## Introduction to AWS Identity and Access Management
+- setup access control in-app level
+- access management
+- IAM can manage access management and API calls(action)
+- IAM can give access/permissions to users
+- IAM policies are JSON documents
+- policy can be attached to specific user and group
+- Reading 1.7: Introduction to AWS Identity and Access Management : https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/3ELvV/reading-1-7-introduction-to-aws-identity-and-access-management
+
+## Role-Based Access in AWS
+- Iam roles also have credentials (temporary)
+- To assign a role for employee dir app -----
+- IAM > Roles > Create Roles > Common use case ec2 check > 
+- roles for third-party identity providers and clients (federated users)
+-  identity provider (IdP)
+- aws iam identity centers
+- Reading 1.8: Role Based Access in AWS
+- https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/hyURm/reading-1-8-role-based-access-in-aws
+
+## Introduction to Exercise 2
+- To implement the previous discussed IAM user best practices like not using root user.
+
+Exercise 2: Following IAM Best Practices : https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/RQIuX/exercise-2-following-iam-best-practices
+Exercise 2: Working with IAM : https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/DEV-AWS-MO-GCNv2/exercise-2-iam.html
+
+12 digin account id and iam user : top right corner
+
+IAM role is used for federated logins (using an IdP with SAML tokens for example), and they don't have permanent access keys that you can download like regular IAM users have (the "an IAM role doesn't have any credentials" part)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
