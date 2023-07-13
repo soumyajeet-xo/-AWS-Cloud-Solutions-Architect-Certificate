@@ -135,6 +135,11 @@ Reading 2.7: Amazon VPC Routing and Security
 ## Introduction to Exercise 4
 Exercise 4: Creating a VPC and relaunching the Corporate Directory Application on Amazon EC2
 - https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/DEV-AWS-MO-GCNv2/exercise-4-networking.html
+One internet gateway can be attached to 1 vpc
+
+ATLAST EMPLOYEE DIR APPLICATION DEPLOY
+
+# WEEK 2 DONE ~SOUMYAJEET BAL
 
 
 
