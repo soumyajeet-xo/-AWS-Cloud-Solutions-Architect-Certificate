@@ -52,9 +52,11 @@ https://www.coursera.org/learn/aws-cloud-technical-essentials/supplement/AZGDV/r
 
 
 ## Introduction to Exercise 5
+## Demo Creating an Amazon S3 Bucket
+
+## Explore Databases on AWS
+- rds and rdbms
 - 
-
-
 
 
 
