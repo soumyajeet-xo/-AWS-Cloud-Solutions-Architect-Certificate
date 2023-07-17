@@ -23,11 +23,14 @@
 
 ## Route Traffic with Amazon Elastic Load Balancing
 - elastic load balancing
-- ELB highly scalable
-- ELB is designed to handle additional throughput and auto handle the additional traffic
-- application load balancer (HTTP and https)
+- ELB is highly scalable
+- ELB is designed to handle additional throughput and auto-handle the additional traffic
+- application load balancer (HTTP and HTTPS)
 - network load balancer(TCP/UDP/LTS)
 - gateway load balancer(3rd party application)
 - ALB three main component(listener, target group(backend you direct the traffic to), Rule )
 - internal facing and internet-facing load balancer
+
+## Amazon EC2 Auto Scaling
+- launch template
 - 
