@@ -34,4 +34,6 @@
 
 ## Amazon EC2 Auto Scaling
 - launch template
-- 
+- see exercise
+
+## End
