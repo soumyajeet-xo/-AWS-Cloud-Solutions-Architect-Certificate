@@ -1,6 +1,7 @@
 ## Introduction to Week 4
 - monitoring tool called amazon cloud watch
 - scalability
+- a monitor gathers data in one centralised loaction
 
 ## Monitoring on AWS
 - monitor and watch network traffic
